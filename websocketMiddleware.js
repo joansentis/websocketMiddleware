@@ -33,10 +33,13 @@ const websocketMiddleware = (() => {
 				websocket.onerror = onError(websocket, store);
 				websocket.onopen = onOpen(websocket, store);
 				break;
-			case 'websocket disconnect':
-				websocket ? websocket.close() : null;
+			case 'websocket open':
 				break;
-			case 'websocket send':
+			case 'websocket close':
+				break;
+			case 'websocket error':
+				break;
+			case 'websocket message':
 				websocket.send(JSON.stringify(action.payload));
 				break;
 			default:
