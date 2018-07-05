@@ -4,7 +4,7 @@ This is an example of a websocket middleware.
 
 ## Add it to your ReactJS project:
 
-In your store.js
+In the store.js
 
 ```
 import { createStore, applyMiddleware, compose } from 'redux';
