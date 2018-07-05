@@ -14,7 +14,6 @@ const websocketMiddleware = (() => {
 	};
 
 	const onMessage = (ws, store) => evt => {
-		// parse the event data to get he message
 		var msg = JSON.parse(evt.data);
 		// add a case for each message type
 		switch (msg.type) {
